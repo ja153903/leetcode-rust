@@ -15,7 +15,7 @@ impl Solution {
                 seen.insert(val, i);
             }
         }
-        
+
         return vec![];
     }
 }
@@ -34,4 +34,3 @@ mod tests {
         assert_eq!(Solution::two_sum(nums, target), expected);
     }
 }
-

@@ -11,7 +11,7 @@ impl Solution {
         let mut result: Vec<i32> = vec![1; nums.len()];
 
         for i in 1..nums.len() {
-            result[i] = result[i-1] * nums[i-1];
+            result[i] = result[i - 1] * nums[i - 1];
         }
 
         let mut build_up: i32 = 1;
@@ -30,7 +30,7 @@ mod tests {
 
     #[test]
     pub fn test_should_pass_basic_case1() {
-        let v: Vec<i32> = vec![1,2,3,4];
+        let v: Vec<i32> = vec![1, 2, 3, 4];
         let expected: Vec<i32> = vec![24, 12, 8, 6];
 
         let result: Vec<i32> = Solution::product_except_self(v);

@@ -40,7 +40,7 @@ impl Solution {
                 return true_mid as i32;
             } else if nums[true_mid] < target {
                 left = mid + 1;
-            } else if mid == 0{
+            } else if mid == 0 {
                 break;
             } else {
                 right = mid - 1;

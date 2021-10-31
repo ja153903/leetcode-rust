@@ -9,10 +9,7 @@ pub struct ListNode {
 impl ListNode {
     #[inline]
     pub fn new(val: i32) -> Self {
-        Self {
-            next: None,
-            val,
-        }
+        Self { next: None, val }
     }
 }
 

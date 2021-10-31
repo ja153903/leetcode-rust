@@ -46,7 +46,7 @@ impl Solution {
                 current_prod *= num;
                 current_max = cmp::max(current_max, current_prod);
             }
-            
+
             cmp::max(current_max, Solution::recursive(nums, start + 1))
         }
     }

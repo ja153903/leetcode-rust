@@ -24,7 +24,7 @@ mod tests {
 
     #[test]
     pub fn test_should_pass_basic_case1() {
-        let v: Vec<i32> = vec![-2,1,-3,4,-1,2,1,-5,4];
+        let v: Vec<i32> = vec![-2, 1, -3, 4, -1, 2, 1, -5, 4];
         let expected: i32 = 6;
         let result = Solution::max_sub_array(v);
 
@@ -42,7 +42,7 @@ mod tests {
 
     #[test]
     pub fn test_should_pass_basic_case3() {
-        let v: Vec<i32> = vec![5,4,-1,7,8];
+        let v: Vec<i32> = vec![5, 4, -1, 7, 8];
         let expected: i32 = 23;
         let result = Solution::max_sub_array(v);
 
