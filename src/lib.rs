@@ -1,0 +1,14 @@
+mod blind75;
+mod top100;
+
+mod data_structures;
+mod search;
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn it_works() {
+        let result = 2 + 2;
+        assert_eq!(result, 4);
+    }
+}
