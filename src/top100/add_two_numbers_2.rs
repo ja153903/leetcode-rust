@@ -2,7 +2,7 @@
 
 struct Solution;
 
-use crate::data_structures::ListNode;
+use crate::data_structures::linked_lists::ListNode;
 
 impl Solution {
     pub fn add_two_numbers(
@@ -42,7 +42,9 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::data_structures::{create_linked_list_from_vec, create_vec_from_linked_list, List};
+    use crate::data_structures::linked_lists::{
+        create_linked_list_from_vec, create_vec_from_linked_list, List,
+    };
 
     #[test]
     pub fn test_basic_test_case1() {
