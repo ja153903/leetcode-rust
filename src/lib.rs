@@ -1,6 +1,6 @@
 mod blind75;
-mod top100;
 mod data_structures;
+mod top100;
 
 mod search;
 

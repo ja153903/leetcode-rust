@@ -9,9 +9,9 @@ impl Solution {
         let mut min_buy: i32 = prices[0];
         let mut profit: i32 = 0;
 
-        for i in 1..prices.len() {
-            min_buy = cmp::min(min_buy, prices[i]);
-            profit = cmp::max(profit, prices[i] - min_buy);
+        for price in &prices {
+            min_buy = cmp::min(min_buy, *price);
+            profit = cmp::max(profit, *price - min_buy);
         }
 
         profit

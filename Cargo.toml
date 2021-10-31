@@ -9,5 +9,5 @@ edition = "2021"
 
 [dev-dependencies.cargo-husky]
 version = "1"
-features = ["precommit-hook", "run-cargo-test", "run-cargo-clippy", "run-cargo-fmt"]
-
+disable-features = false
+features = ["precommit-hook", "run-cargo-test", "run-cargo-fmt", "run-cargo-clippy"]

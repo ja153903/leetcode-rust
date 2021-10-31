@@ -9,8 +9,8 @@ impl Solution {
         let mut max_so_far = nums[0];
         let mut current_max = nums[0];
 
-        for i in 1..nums.len() {
-            max_so_far = cmp::max(nums[i], nums[i] + max_so_far);
+        for &num in nums.iter().skip(1) {
+            max_so_far = cmp::max(num, num + max_so_far);
             current_max = cmp::max(current_max, max_so_far);
         }
 

@@ -2,11 +2,13 @@
 
 struct Solution;
 
+use std::cmp;
+
 impl Solution {
     pub fn three_sum(mut nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut result: Vec<Vec<i32>> = Vec::new();
 
-        nums.sort();
+        nums.sort_unstable();
 
         let mut i: i32 = 0;
 
@@ -19,22 +21,26 @@ impl Solution {
                     let target: i32 = -nums[i as usize];
                     let current: i32 = nums[j as usize] + nums[k as usize];
 
-                    if current == target {
-                        result.push(vec![nums[i as usize], nums[j as usize], nums[k as usize]]);
+                    match current.cmp(&target) {
+                        cmp::Ordering::Equal => {
+                            result.push(vec![nums[i as usize], nums[j as usize], nums[k as usize]]);
 
-                        while j < k && nums[j as usize] == nums[(j + 1) as usize] {
+                            while j < k && nums[j as usize] == nums[(j + 1) as usize] {
+                                j += 1;
+                            }
+                            while j < k && nums[k as usize] == nums[(k - 1) as usize] {
+                                k -= 1;
+                            }
+
                             j += 1;
-                        }
-                        while j < k && nums[k as usize] == nums[(k - 1) as usize] {
                             k -= 1;
                         }
-
-                        j += 1;
-                        k -= 1;
-                    } else if current < target {
-                        j += 1;
-                    } else {
-                        k -= 1;
+                        cmp::Ordering::Less => {
+                            j += 1;
+                        }
+                        cmp::Ordering::Greater => {
+                            k -= 1;
+                        }
                     }
                 }
             }

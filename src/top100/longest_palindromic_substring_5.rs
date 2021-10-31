@@ -38,13 +38,13 @@ impl Solution {
     }
 
     fn get_palindrome(s: &str, mut i: i32, mut j: i32) -> (String, i32) {
-        let mut palindrome: String = s[(i as usize)..(i as usize)+1].to_string();
+        let mut palindrome: String = s[(i as usize)..(i as usize) + 1].to_string();
 
         while i >= 0 && j < s.len() as i32 {
             let si = i as usize;
             let sj = j as usize;
 
-            if &s[si..si + 1] == &s[sj..sj + 1] {
+            if s[si..si + 1] == s[sj..sj + 1] {
                 palindrome = s[si..=sj].to_string();
                 i -= 1;
                 j += 1;

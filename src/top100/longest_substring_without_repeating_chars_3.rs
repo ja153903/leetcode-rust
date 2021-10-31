@@ -2,8 +2,8 @@
 
 struct Solution;
 
-use std::collections::HashMap;
 use std::cmp;
+use std::collections::HashMap;
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
@@ -13,7 +13,7 @@ impl Solution {
 
         for (current, ch) in s.chars().enumerate() {
             if last_seen.contains_key(&ch) {
-                let last_occurence= last_seen.get(&ch).unwrap();
+                let last_occurence = last_seen.get(&ch).unwrap();
                 // we update the pointer based on the current max of the start pointer
                 // i.e. look at the string "abba"
                 // if we just update based on last occurence, we'll get a length of 3

@@ -12,8 +12,8 @@ impl Solution {
             let mut current_prod: i32 = 1;
             let mut current_max: i32 = 0;
 
-            for j in i..nums.len() {
-                current_prod *= nums[j];
+            for &num in nums.iter().skip(i) {
+                current_prod *= num;
                 current_max = cmp::max(current_max, current_prod);
             }
 
@@ -42,8 +42,8 @@ impl Solution {
             let mut current_max: i32 = 0;
             let mut current_prod: i32 = nums[start];
 
-            for idx in (start+1)..nums.len() {
-                current_prod *= nums[idx];
+            for &num in nums.iter().skip(start + 1) {
+                current_prod *= num;
                 current_max = cmp::max(current_max, current_prod);
             }
             
@@ -62,9 +62,9 @@ impl Solution {
         let mut min_so_far = nums[0];
         let mut current_max = nums[0];
 
-        for i in 1..nums.len() {
-            let temp_max = cmp::max(nums[i], cmp::max(nums[i] * max_so_far, nums[i] * min_so_far));
-            min_so_far = cmp::min(nums[i], cmp::min(nums[i] * max_so_far, nums[i] * min_so_far));
+        for &num in nums.iter().skip(1) {
+            let temp_max = cmp::max(num, cmp::max(num * max_so_far, num * min_so_far));
+            min_so_far = cmp::min(num, cmp::min(num * max_so_far, num * min_so_far));
 
             max_so_far = temp_max;
 

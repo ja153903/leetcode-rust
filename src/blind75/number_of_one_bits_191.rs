@@ -8,8 +8,8 @@ impl Solution {
 
         while n != 0 {
             // increase count if last bit is a 1
-            count = count + (n & 1) as i32;
-            n = n >> 1;
+            count += (n & 1) as i32;
+            n >>= 1;
         }
 
         count

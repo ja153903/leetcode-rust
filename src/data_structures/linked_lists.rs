@@ -20,7 +20,7 @@ type Link = Option<Box<ListNode>>;
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct List {
-    pub head: Link
+    pub head: Link,
 }
 
 impl List {
@@ -38,7 +38,7 @@ impl List {
     }
 }
 
-pub fn create_linked_list_from_vec(v: &Vec<i32>) -> List {
+pub fn create_linked_list_from_vec(v: &[i32]) -> List {
     let mut list = List::new();
 
     for &num in v.iter().rev() {
