@@ -1,5 +1,6 @@
 mod best_time_to_buy_and_sell_stock_121;
 mod climbing_stairs_70;
+mod coin_change_322;
 mod container_with_most_water_11;
 mod contains_duplicate_217;
 mod counting_bits_338;
