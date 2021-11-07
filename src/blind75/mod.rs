@@ -20,4 +20,5 @@ mod reverse_bits_190;
 mod search_in_rotated_sorted_array_33;
 mod three_sum_15;
 mod two_sum_1;
+mod unique_paths_62;
 mod word_break_139;
