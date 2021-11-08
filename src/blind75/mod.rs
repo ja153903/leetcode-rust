@@ -9,6 +9,7 @@ mod decode_ways_75;
 mod find_minimum_in_sorted_array_153;
 mod house_robber_198;
 mod house_robber_ii_213;
+mod jump_game_55;
 mod longest_common_subsequence_1143;
 mod longest_increasing_subsequence_300;
 mod maximum_product_subarray_152;
